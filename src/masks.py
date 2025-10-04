@@ -1,5 +1,5 @@
 def get_mask_card_number(card_number: str = "0000000000000000") -> str:
-    """Функция принимает на вход номер карты (строка из 16 цифр без пробелов) и
+    """Функция  принимает на вход номер карты (строка из 16 цифр без пробелов) и
     возвращает ее маску в формате 'XXXX XX** **** XXXX'"""
     if card_number.isdigit() and len(card_number) == 16:
         substring_1 = card_number[0:4] + " "
