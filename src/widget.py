@@ -82,19 +82,19 @@ def get_date(date: str = "2024-03-11T02:26:18.671407") -> str:
     return date_
 
 
-print(get_date("2024-02-28T02:26:18.671407"))
-print(get_date("2023-11-25T02:26:18.671408"))
-print(get_date("2024-06-11 T02:26:18.671407"))
-print(get_date("2024-07-11 T02:26:18"))
-print(get_date("2024-12-31T02:26:18.671407"))
-print(get_date("2025-03-30T02"))
-print(get_date("2024.12.31"))
+#print(get_date("2024-02-28T02:26:18.671407"))
+#print(get_date("2023-11-25T02:26:18.671408"))
+#print(get_date("2024-06-11 T02:26:18.671407"))
+#print(get_date("2024-07-11 T02:26:18"))
+#print(get_date("2024-12-31T02:26:18.671407"))
+#print(get_date("2025-03-30T02"))
+#print(get_date("2024.12.31"))
 
-print(get_date("2024ю03ю11T02ж26ж18ю671407"))
-print(get_date("0001-04-31T02:26:18.671407"))
-print(get_date("2024-02-29"))
-print(get_date("2025-02-29"))
-print(get_date("2020/02/30"))
+#print(get_date("2024ю03ю11T02ж26ж18ю671407"))
+#print(get_date("0001-04-31T02:26:18.671407"))
+#print(get_date("2024-02-29"))
+#print(get_date("2025-02-29"))
+#print(get_date("2020/02/30"))
 
 print(get_date("0000-10-31T02:26:18.671407"))
 print(get_date("0001-05-32T02:26:18.671407"))

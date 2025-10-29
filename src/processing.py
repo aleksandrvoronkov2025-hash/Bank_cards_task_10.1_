@@ -123,6 +123,6 @@ results_of_states_uncorrect_date = [
     {"id": 594226727, "state": "CANCELED", "date": "2025-02-29T21:27:25.241689"},
     {"id": 615064591, "state": "CANCELED", "date": "2020-04-31T081:33.419441"},
 ]
-print(sort_by_date(results_of_states_uncorrect_date, True))
-print(sort_by_date(results_of_states_uncorrect_date, False))
-print(sort_by_date(results_of_states_uncorrect_date))
+#print(sort_by_date(results_of_states_uncorrect_date, True))
+#print(sort_by_date(results_of_states_uncorrect_date, False))
+#print(sort_by_date(results_of_states_uncorrect_date))
