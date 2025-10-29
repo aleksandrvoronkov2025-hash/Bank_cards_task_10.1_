@@ -19,7 +19,7 @@ def mask_account_card(card: str = "Cчет 00000000000000000000") -> str:
         card_number = card[-16:]
         card_number_length = len(card_number)
         name_length = len(card) - 16
-        name_card = card[0 : name_length - 1]
+        name_card = card[0: name_length - 1]
         if card_number_length == 16 and name_card.lower() in card_names_variants:
             mask_card_number = masks.get_mask_card_number(card_number)
             mask = name_card + " " + mask_card_number
