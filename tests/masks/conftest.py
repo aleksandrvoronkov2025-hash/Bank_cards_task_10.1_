@@ -2,7 +2,6 @@ import pytest
 
 from src.masks import get_mask_account, get_mask_card_number
 
-
 # 1. Фикстуры для тестирования функции get_mask_card_number:
 # 1.1 Проверка маскирования карты с корректным номером (из 16 цифр).
 @pytest.fixture
