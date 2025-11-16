@@ -276,3 +276,144 @@ results_of_states_incorrect_date = [
 @pytest.fixture
 def incorrect_date():
     return results_of_states_incorrect_date
+
+
+# 11.1 Домашка.
+# Списки транзакций (входные данные для тестирования)
+
+transactions_1 = [
+    {
+        "id": 939719570,
+        "state": "EXECUTED",
+        "date": "2018-06-30T02:08:58.425572",
+        "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+        "description": "Перевод организации",
+        "from": "Счет 75106830613657916952",
+        "to": "Счет 11776614605963066702",
+    },
+    {
+        "id": 142264268,
+        "state": "EXECUTED",
+        "date": "2019-04-04T23:20:05.206878",
+        "operationAmount_": {"amount": "79114.93", "currency": {"name": "USD", "code": "USD"}},
+        "description": "Перевод со счета на счет",
+        "from": "Счет 19708645243227258542",
+        "to": "Счет 75651667383060284188",
+    },
+    {
+        "id": 939719571,
+        "state": "EXECUTED",
+        "date": "2019-07-30T02:07:58.425572",
+        "operationAmount": {"amount": "20000.07", "currency_": {"name": "USD", "code": "USD"}},
+        "description": "Перевод организации",
+        "from": "Счет 75106830613657916953",
+        "to": "Счет 11776614605963066704",
+    },
+    {},
+]
+
+transactions_2 = [
+    {
+        "id": 939719572,
+        "state": "EXECUTED",
+        "date": "2020-06-30T02:09:58.425572",
+        "operationAmount": {"amount": "9824.07", "currency": {"name": "RUB", "code": "RUB"}},
+        "description": "Перевод частному лицу",
+        "from": "Счет 75106830613657916957",
+        "to": "Счет 11776614605963066708",
+    },
+    {
+        "id": 939719573,
+        "state": "EXECUTED",
+        "date": "2020-07-30T02:10:58.425572",
+        "operationAmount": {"amount": "7000.07", "currency": {"name": "CNY", "code": "CNY"}},
+        "description": "Перевод другану",
+        "from": "Счет 75106830613657916923",
+        "to": "Счет 11776614605963066826",
+    },
+]
+
+transactions_3 = [
+    {
+        "id": 939719570,
+        "state": "EXECUTED",
+        "date": "2018-06-30T02:08:58.425572",
+        "operationAmount": {"amount": "9824.07", "currency": {"name": "USD", "code": "USD"}},
+        "description": "Перевод на СВО",
+        "from": "Счет 75106830613657916952",
+        "to": "Счет 11776614605963066702",
+    },
+    {
+        "id": 142264268,
+        "state": "EXECUTED",
+        "date": "2019-04-04T23:20:05.206878",
+        "operationAmount_": {"amount": "79114.93", "currency": {"name": "USD", "code": "USD"}},
+        "description": "Перевод со счета на счет",
+        "from": "Счет 19708645243227258542",
+        "to": "Счет 75651667383060284188",
+    },
+    {
+        "id": 939719571,
+        "state": "EXECUTED",
+        "date": "2019-07-30T02:07:58.425572",
+        "operationAmount": {"amount": "20000.07", "currency_": {"name": "USD", "code": "USD"}},
+        "description_": "Перевод организации",
+        "from": "Счет 75106830613657916953",
+        "to": "Счет 11776614605963066704",
+    },
+    {},
+]
+
+
+transactions_4 = []
+
+# Фикстуры для функции-генератора "filter_by_currency"
+@pytest.fixture
+def currency_1():
+    return transactions_1
+
+
+@pytest.fixture
+def currency_2():
+    return transactions_2
+
+
+# Фикстуры для функции-генератора "transaction_descriptions"
+
+
+@pytest.fixture
+def description_1():
+    return transactions_1
+
+
+@pytest.fixture
+def description_2():
+    return transactions_2
+
+
+@pytest.fixture
+def description_3():
+    return transactions_3
+
+@pytest.fixture
+def description_4():
+    return transactions_4
+
+# Фикстуры для функции-генератора "card_number_generator"
+start_1 = 9
+end_1 = 11
+
+
+@pytest.fixture
+def card_generator_1():
+    return start_1, end_1
+
+
+@pytest.fixture
+def card_generator_2():
+    return 9999999999999998, 9999999999999996
+
+
+@pytest.fixture
+def card_generator_3():
+    return 0, 10000000000000000
