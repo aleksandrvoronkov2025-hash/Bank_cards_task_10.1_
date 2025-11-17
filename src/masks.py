@@ -14,9 +14,25 @@ def get_mask_card_number(card_number: str = "0000000000000000") -> str:
 
 def get_mask_account(account_number: str = "00000000000000000000") -> str:
     """Функция принимает на вход номер счета (строка из 20 цифр без пробелов) и
-    возвращает его маску в формате '**XXXX' """
+    возвращает его маску в формате '**XXXX'"""
+    if account_number == "":
+        account_number = "00000000000000000000"
     if account_number.isdigit() and len(account_number) == 20:
         mask_account_number = "**" + account_number[-4:]
     else:
         mask_account_number = "Номер счета указан неверно"
     return mask_account_number
+
+
+# print(get_mask_card_number("73654108430135874305"))
+# print(get_mask_account("173654108430135874305"))
+# print(get_mask_account("ф365410843013587430"))
+# print(get_mask_account("7365410843013587430"))
+# print(get_mask_account(""))
+# print(get_mask_account("Visa Platinum 7000792289606361"))
+# print(get_mask_account("Maestro 1234567890123456"))
+# print(get_mask_account("Счет 73654108430135874305"))
+# print(get_mask_account("Счет 7365410843013587430a"))
+# print(get_mask_account("173654108430135874305"))
+# print(get_mask_account())
+# print(get_mask_card_number())
